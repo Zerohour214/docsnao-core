@@ -1,7 +1,7 @@
-import { parseCLIArgs } from '../../config/cliParser';
-import { FileLoader } from '../../shared/io/fileLoader';
-import { Logger } from '../../shared/logging/logger';
-import { DocGenerationService } from '../../usecase/docGenerationService';
+import { parseCLIArgs } from '@config/cliParser';
+import { FileLoader } from '@shared/io/fileLoader';
+import { Logger } from '@shared/logging/logger';
+import { DocGenerationService } from '@usecase/docGenerationService';
 
 export class CLI {
   async run() {

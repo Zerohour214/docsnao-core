@@ -1,5 +1,5 @@
-import { OpenAIClient } from '../infra/openai/openaiClient';
-import { PromptFactory } from '../domain/prompt/factory/promptBuilder';
+import { OpenAIClient } from '@infra/openai/openaiClient';
+import { PromptFactory } from '@domain/prompt/factory/promptBuilder';
 
 export class DocGenerationService {
   private openai = new OpenAIClient();

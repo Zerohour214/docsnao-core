@@ -1,4 +1,4 @@
-import { CLI } from './presentation/cli/cli';
+import { CLI } from '@cli/cli';
 
 (async () => {
   const cli = new CLI();

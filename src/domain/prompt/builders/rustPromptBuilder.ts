@@ -1,4 +1,4 @@
-import { PromptBuilder } from '../factory/promptBuilder';
+import { PromptBuilder } from '@prompt/factory/promptBuilder';
 
 export class RustPromptBuilder implements PromptBuilder {
   build(code: string): string {

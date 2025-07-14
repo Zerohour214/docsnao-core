@@ -1,23 +1,22 @@
 import * as dotenv from 'dotenv';
-import { Configuration, OpenAIApi } from 'openai';
+import OpenAI from 'openai';
 
 dotenv.config();
 
 export class OpenAIClient {
-  private client: OpenAIApi;
+  private client: OpenAI;
 
   constructor() {
-    const config = new Configuration({ apiKey: process.env.OPENAI_API_KEY });
-    this.client = new OpenAIApi(config);
+    this.client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   }
 
   async generate(prompt: string): Promise<string> {
-    const res = await this.client.createChatCompletion({
+    const res = await this.client.chat.completions.create({
       model: 'gpt-4o',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.3,
     });
 
-    return res.data.choices[0].message?.content?.trim() || '[No response]';
+    return res.choices[0].message.content?.trim() || '[No response]';
   }
 }

@@ -2,13 +2,23 @@
   "compilerOptions": {
     "target": "es2020",
     "module": "esnext",
+    "moduleResolution": "node",
     "outDir": "dist",
     "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@cli/*": ["presentation/cli/*"],
+      "@usecase/*": ["usecase/*"],
+      "@domain/*": ["domain/*"],
+      "@infra/*": ["infra/*"],
+      "@shared/*": ["shared/*"],
+      "@prompt/*": ["domain/prompt/*"],
+      "@config/*": ["config/*"],
+    },
     "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "skipLibCheck": true
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts"]
 }
