@@ -84,8 +84,6 @@ node dist/index.js --language rust --file path/to/your_file.rs
 
 ## ⚖️ License
 
-MIT License © [Your Name]
+MIT License © Kimi no Nawa
 
 ---
-
-Feel free to contribute or open issues! Happy coding! 🚀
